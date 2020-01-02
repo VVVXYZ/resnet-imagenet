@@ -103,7 +103,7 @@ if __name__ == '__main__':
     #distorted_images = X - [123.68, 116.78, 103.94]
     #distorted_images = tf.image.per_image_standardization(X)
     #distorted_images=X
-    distorted_images = tf.image.resize_images(X, [224,224])
+    #distorted_images = tf.image.resize_images(X, [224,224])
     with slim.arg_scope(nets.resnet_v1.resnet_arg_scope()):
         net, endpoints = nets.resnet_v1.resnet_v1_50(distorted_images, num_classes=1000,
                                                      is_training=is_training)
